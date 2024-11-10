@@ -1,0 +1,114 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  /* Initial gradient background */
+  background: linear-gradient(135deg, #00aaff, #00ff6c);
+  background-size: 200% 200%;
+  animation: bgAnimation 8s ease infinite;
+}
+
+/* Define keyframes for the background gradient animation */
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Calculator styling */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styling with animation */
+.calculator-grid > button {
+  user-select: none;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.002s, transform 0.005s ease-in-out,
+    box-shadow 0.002s;
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calculator-grid > button:active {
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: scale(0.95); /* Adds a press effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Special buttons styling for AC and = */
+.span-two {
+  grid-column: span 2;
+  background-color: #ff5c5c;
+  color: white;
+  transition: background-color 0.2s, transform 0.1s ease-in-out;
+}
+
+.span-two:hover {
+  background-color: #ff7f7f;
+}
+
+.span-two:active {
+  transform: scale(0.95);
+  background-color: #ff4a4a;
+}
+
+/* Display styling */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Operand display styling */
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.25rem;
+}
+
+.output .current-operand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ff6c;
+}
