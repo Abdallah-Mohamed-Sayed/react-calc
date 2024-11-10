@@ -12,7 +12,7 @@ A simple and interactive calculator built with React that supports basic arithme
 - 
 ## Demo
 
-A live demo of the application can be found [here](https://bourkeba.netlify.app/).
+A live demo of the application can be found [here](https://bourkeba-react-calc.netlify.app/).
 
 ## Usage
 
