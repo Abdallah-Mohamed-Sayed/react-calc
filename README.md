@@ -9,6 +9,10 @@ A simple and interactive calculator built with React that supports basic arithme
 - Decimal input and formatting with thousands separators.
 - Responsive design with animations for buttons.
 - Handles edge cases like division by zero.
+- 
+## Demo
+
+A live demo of the application can be found [here](https://bourkeba.netlify.app/).
 
 ## Usage
 
